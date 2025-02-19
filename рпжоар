@@ -15,3 +15,11 @@ if word in meme_dict.keys():
 else:
     print('нет иди к пидиди')
     # Что делать, если слово не нашлось?
+
+@bot.message_handler(content_types=["tacz-1.20.1-1.1.4-hotfix-all.jar"])
+def handle_files(message):
+    document_id = message.document.file_id
+    file_info = bot.get_file(tacz-1.20.1-1.1.4-hotfix-all.jar)
+    print(document_id)  # Выводим file_id
+    print(f'http://api.telegram.org/file/bot{7812854680:AAHq8gMVLTenXYpZhbxW_b4yTXOl4o7mOdE}/{file_info.file_path}')  # Выводим ссылку на файл
+    bot.send_message(message.chat.id, document_id)  # Отправляем пользователю file_id [3](https://dzen.ru/a/YX0a1rPoVRyunBpL)
